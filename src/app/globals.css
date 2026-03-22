@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafbfc;
+  --foreground: #1a2b48;
+  /* Kiddo 式：白底 + 珊瑚点缀 + 海军蓝标题/底栏 */
+  --ui-page-bg: #fafbfc;
+  --ui-surface: #ffffff;
+  --ui-navy: #1a2b48;
+  --ui-navy-soft: #2d3f5e;
+  --ui-coral: #ff6b6b;
+  --ui-coral-soft: #ffe8e8;
+  --ui-muted: #6b7280;
+  --ui-border: #e8edf2;
+  --ui-shadow: 0 10px 40px rgba(26, 43, 72, 0.08);
+  --ui-shadow-hover: 0 14px 48px rgba(26, 43, 72, 0.12);
+  /* 兼容旧变量名 */
+  --report-bg: var(--ui-page-bg);
+  --report-surface: var(--ui-surface);
+  --report-surface-hover: #f3f6f9;
+  --report-border: var(--ui-border);
+  --report-heading: var(--ui-navy);
+  --report-text: #334155;
+  --report-muted: var(--ui-muted);
+  --report-accent: var(--ui-coral);
+  --report-accent-hover: #ff5252;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--ui-page-bg);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Word 导出 HTML（生平与职业路径） */
+.lai-word-html {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+.lai-word-html p {
+  margin: 0.65em 0;
+  text-align: left;
+}
+.lai-word-html b,
+.lai-word-html strong {
+  font-weight: 600;
+  color: var(--ui-navy);
+}
+.lai-word-html font {
+  font-family: inherit;
+}
+.lai-word-html span[style*="rgb(51,112,255)"] {
+  color: var(--ui-coral) !important;
+}
